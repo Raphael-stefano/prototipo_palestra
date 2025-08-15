@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+.top-bar {
+    background-color: #2f5f00;
+    color: white;
+    text-align: center;
+    padding: 40px;
+}
+.timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #022d24;
+    color: white;
+    padding: 50px 150px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+.hero-text {
+    flex: 1;
+    min-width: 250px;
+    padding-right: 20px;
+}
+.hero-pill-span{
+    background-color: #bde7a0;
+    color: #012722;
+    padding: 10px 5px;
+    border-radius: 25px;
+}
+.hero-text h1 {
+    color: #4cd10e;
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.hero-text p {
+    line-height: 1.5;
+}
+.form-box {
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+    flex: 1;
+    min-width: 250px;
+}
+.form-box h3 {
+    margin-top: 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    color: #3d3d62;
+}
+.form-box p {
+    margin-top: 0;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.form-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #4cd10e;
+    box-sizing: border-box;
+}
+.form-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #4cd10e;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.form-box button:hover {
+    background-color: #022d24;
+}
+
+
+
+.challenges {
+    text-align: center;
+    padding: 20px 150px;
+    background-color: #eecbf4;
+}
+.challenges h2 {
+    color: #954fb2;
+    font-size: 3em;
+}
+.challenges-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.challenge-card {
+    background-color: white;
+    padding: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 200px;
+    flex: 1;
+}
+.challenge-card .challenge-icon{
+    padding: 20px 22.5px;
+    background-color: #9753b3;
+    display: inline-block;
+    border-radius: 100%;
+    font-size: 2em;
+    color: white;
+}
+.challenge-card h4 {
+    color: black;
+    margin-bottom: 50px;
+}
+.challenge-card p {
+    padding: 0 20px;
+}
+
+
+
+.discover {
+    padding: 20px 150px;
+    text-align: center;
+    background-color: #eecbf4;
+}
+.discover h2 {
+    color: #954fb2;
+    width: 50%;
+    text-align: left;
+    margin-left: 30px;
+    font-size: 2.5em;
+}
+.discover div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.discover ul {
+    text-align: left;
+    max-width: 600px;
+}
+.heart-list {
+  list-style: none; /* remove o marcador padrão */
+}
+
+.heart-list li {
+  position: relative;
+  padding-left: 1.5em; /* espaço para o coração */
+}
+
+.heart-list li::before {
+  content: "❤️"; /* o coração */
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.discover ul li {
+    margin-bottom: 8px;
+}
+.cta {
+    display: inline-block;
+    background-color: #005c51;
+    color: white;
+    padding: 12px 45px;
+    border-radius: 28px;
+    font-weight: bold;
+    font-size: 1.6em;
+    text-decoration: none;
+}
+.cta:hover {
+    background-color: #022d24;
+}
+.discover p {
+    text-align: left;
+    margin: 50px 30px;
+}
