@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('pages/home');
+})->name('lading-page');
+
+Route::get('/group', function () {
+    return view('pages/group');
+})->name('group');
