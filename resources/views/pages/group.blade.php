@@ -5,6 +5,11 @@
 @section('content')
 
     <div class="confirmation-page">
+
+        @if (session('success'))
+            <div class="success">{{ session('success') }}</div>
+        @endif
+
         <div class="confirmation-container">
             <p class="greeting">❤️ Inscrição Confirmada! 👍</p>
     

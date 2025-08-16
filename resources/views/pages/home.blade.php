@@ -21,10 +21,20 @@
         <div class="form-box">
             <h3>Garanta Sua Vaga no Webinar Exclusivo</h3>
             <p>Preencha o formulário abaixo para garantir sua participação.</p>
-            <form action="{{ route('group') }}">
-                <input type="text" placeholder="Seu Nome" required>
-                <input type="email" placeholder="Digite seu melhor e-mail" required>
-                <input type="tel" placeholder="(DDD) Whatsapp" required>
+            <form action="{{ route('users.store') }}" method="post">
+                @csrf
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                @error('name')
+                    <div class="error">{{ $message }}</div>
+                @enderror
+                <input type="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                @error('email')
+                    <div class="error">{{ $message }}</div>
+                @enderror
+                <input type="tel" name="telephone" placeholder="(DDD) Whatsapp" required>
+                @error('telephone')
+                    <div class="error">{{ $message }}</div>
+                @enderror
                 <button type="submit">Garantir Minha Vaga Agora</button>
             </form>
             <small style="display:block;margin-top:10px;font-size:0.8rem;color:#a79a9a;text-align: center;">
