@@ -6,9 +6,8 @@
 
     {{-- Topo com Timer --}}
     <div class="top-bar">
-        <span style="position: absolute; left: 150px;">NeuroSlim</span>
-        <span>Evento começa em:</span>
-        <span class="timer" id="countdown">01:14:35:23</span>
+        <img class="logo" src="{{ asset('images/logo.png') }}" alt="logo NeuroSlim">
+        <x-outdoor-number targetDate="2025-08-25 20:30:00" />
     </div>
 
     {{-- Seção principal --}}

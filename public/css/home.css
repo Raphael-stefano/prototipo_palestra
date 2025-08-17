@@ -6,14 +6,29 @@ body {
     color: #333;
 }
 .top-bar {
-    background-color: #2f5f00;
+    background-color: #217404;
     color: white;
-    text-align: center;
-    padding: 40px;
+    padding: 20px 10px;
+
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
 }
-.timer {
-    font-size: 1.2rem;
-    font-weight: bold;
+
+.logo{
+    width: 100px;
+}
+
+@media screen and (min-width: 768px) {
+    .top-bar {
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .logo{
+        width: 176px;
+    }
 }
 
 .hero {
@@ -38,7 +53,7 @@ body {
     border-radius: 25px;
 }
 .hero-text h1 {
-    color: #4cd10e;
+    color: #4CD10E;
     font-size: 3rem;
     margin-bottom: 15px;
 }
@@ -71,14 +86,14 @@ body {
     padding: 10px;
     margin: 8px 0;
     border-radius: 5px;
-    border: 1px solid #4cd10e;
+    border: 1px solid #4CD10E;
     box-sizing: border-box;
 }
 .form-box button {
     width: 100%;
     padding: 12px;
     margin-top: 15px;
-    background-color: #4cd10e;
+    background-color: #4CD10E;
     color: white;
     font-weight: bold;
     border: none;
