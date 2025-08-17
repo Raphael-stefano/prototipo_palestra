@@ -1,29 +1,44 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
     background-color: #fff;
     color: #333;
 }
-.top-bar {
+
+.container-top-bar{
+    width: 100%;
+
     background-color: #217404;
     color: white;
-    padding: 20px 10px;
+    padding: 20px 15px;
+}
+.top-bar {
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
 
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     align-items: center;
     gap: 10px;
 }
-
 .logo{
+    justify-self: flex-start;
     width: 100px;
 }
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
     .top-bar {
+        display: grid;
         grid-template-columns: 1fr auto 1fr;
+        justify-items: center;
+        align-items: center;
     }
 
     .logo{
@@ -31,181 +46,273 @@ body {
     }
 }
 
-.hero {
+.container-hero {
     display: flex;
     flex-wrap: wrap;
     background-color: #022d24;
     color: white;
-    padding: 50px 150px;
-    align-items: center;
-    justify-content: space-between;
+    padding: 100px 15px;
     font-size: 1.5em;
 }
-.hero-text {
-    flex: 1;
-    min-width: 250px;
-    padding-right: 20px;
+.hero-large{
+    display: none !important;
 }
-.hero-pill-span{
-    background-color: #bde7a0;
-    color: #012722;
-    padding: 10px 5px;
-    border-radius: 25px;
+.hero-mobile{
+    display: block;
+}
+.hero{
+    margin: auto;
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 40px;
+}
+.hero-text {
+    max-width: 550px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+    text-align: center;
 }
 .hero-text h1 {
-    color: #4CD10E;
     font-size: 3rem;
-    margin-bottom: 15px;
+}
+.hero-text > h1 > strong{
+    color: #4CD10E;
 }
 .hero-text p {
     line-height: 1.5;
 }
+.hero-pill{
+    font-weight: 600;
+}
+.hero-pill-strong{
+    padding: 10px;
+    background-color: #bde7a0;
+    color: #2c3e50;
+    border-radius: 25px;
+}
 .form-box {
+    width: 100%;
+    padding: 30px 15px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
     background-color: white;
     color: black;
-    padding: 30px;
-    border-radius: 10px;
-    max-width: 350px;
-    flex: 1;
-    min-width: 250px;
+    border-radius: 20px;
+    border: 2px solid #A1D046;
 }
 .form-box h3 {
-    margin-top: 0;
-    font-size: 1.1em;
+    font-size: 1.25em;
     font-weight: bold;
     text-align: center;
-    color: #3d3d62;
+    color: #3d3d3d;
 }
 .form-box p {
-    margin-top: 0;
     font-size: 0.75rem;
     font-weight: bold;
+    text-align: center;
 }
-.form-box input {
+.form{
+    padding: 0px 20px;
+
+    display: flex;
+    flex-flow: flex;
+    flex-flow: column nowrap;
+    gap: 15px;
+}
+.form input {
     width: 100%;
     padding: 10px;
-    margin: 8px 0;
+
     border-radius: 5px;
     border: 1px solid #4CD10E;
     box-sizing: border-box;
+
+    font-size: .7em;
 }
-.form-box button {
+.form button {
     width: 100%;
-    padding: 12px;
-    margin-top: 15px;
+    padding: 18px 12px;
     background-color: #4CD10E;
+    
+    cursor: pointer;
+
     color: white;
     font-weight: bold;
     border: none;
     border-radius: 15px;
-    cursor: pointer;
+    font-size: .85em;
+
+    transition: all .3s ease-in-out;
 }
-.form-box button:hover {
-    background-color: #022d24;
+.form button:active{
+    transform: scale(.95);
+    transition: all .1s ease-in-out;
 }
+.subtitle{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
 
-
-
-.challenges {
+    font-family: "Montserrat", sans-serif;
+}
+.subtitle small{
+    display: block;
+    font-size: 0.8rem;
+    color: #a79a9a;
     text-align: center;
-    padding: 20px 150px;
-    background-color: #eecbf4;
 }
-.challenges h2 {
+.subtitle strong{
+    font-size: 1rem;
+    font-weight: normal;
+}
+@media screen and (min-width: 769px) {
+    .hero-large{
+        display: block !important;
+    }
+    .hero-mobile{
+        display: none;
+    }
+    .hero{
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .hero-text{
+        text-align: left;
+    }
+    .form{
+        min-width: 330px;
+    }
+    .form button:hover {
+        background-color: #022d24;
+    }
+}
+
+
+
+.container-challenges_and_discover {
+    padding: 100px 15px;
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: 100px;
+
+    background-color: #eecbf4;
+    color: black;
+}
+.container-challenges_and_discover h2 {
+    text-align: center;
     color: #954fb2;
     font-size: 3em;
 }
-.challenges-grid {
+.container-challenges_and_discover h2 > span{
+    color: #005c51;
+}
+.container-challenges_and_discover h3 {
+    color: #954fb2;
+    text-align: center;
+    font-size: 2.5em;
+}
+.container-challenges_and_discover h3 > span{
+    color: #005c51;
+}
+
+.challenges {
+    max-width: 1000px;
+    margin: auto;
+
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column nowrap;
+    gap: 50px;
+}
+.challenges-grid {
+    width: 100%;
+
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
-    margin-top: 20px;
-}
-.challenge-card {
-    background-color: white;
-    padding: 10px 5px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 200px;
-    flex: 1;
-}
-.challenge-card .challenge-icon{
-    padding: 20px 22.5px;
-    background-color: #9753b3;
-    display: inline-block;
-    border-radius: 100%;
-    font-size: 2em;
-    color: white;
-}
-.challenge-card h4 {
-    color: black;
-    margin-bottom: 50px;
-}
-.challenge-card p {
-    padding: 0 20px;
+    align-items: center;
+    gap: 20px;
 }
 
 
 
 .discover {
-    padding: 20px 150px;
-    text-align: center;
-    background-color: #eecbf4;
-}
-.discover h2 {
-    color: #954fb2;
-    width: 50%;
-    text-align: left;
-    margin-left: 30px;
-    font-size: 2.5em;
+    max-width: 1000px;
+    margin: auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 50px;
 }
 .discover div {
     display: flex;
+    flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 .discover ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+
     text-align: left;
-    max-width: 600px;
+    line-height: 1.4em;
 }
 .heart-list {
-  list-style: none; /* remove o marcador padrão */
+    list-style: none;
 }
-
-.heart-list li {
-  position: relative;
-  padding-left: 1.5em; /* espaço para o coração */
-}
-
 .heart-list li::before {
-  content: "❤️"; /* o coração */
-  position: absolute;
-  left: 0;
-  top: 0;
+    content: "❤️ ";
 }
-.discover ul li {
-    margin-bottom: 8px;
-}
+
 .cta {
+    padding: 18px 40px;
+
     display: inline-block;
+    
     background-color: #005c51;
     color: white;
-    padding: 12px 45px;
-    border-radius: 28px;
+    border-radius: 100px;
     font-weight: bold;
-    font-size: 1.6em;
+    font-size: 1.4em;
     text-decoration: none;
+    text-align: center;
+
+    transition: all .3s ease-in-out;
 }
-.cta:hover {
-    background-color: #022d24;
+.cta:active{
+    transform: scale(.95);
+    transition: all .1s ease-in-out;
 }
+
 .discover p {
+    font-size: 1.1rem;
     text-align: left;
-    margin: 50px 30px;
+    text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+    .discover div {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+    }
 
-
-
-
-
+    .cta{
+        font-size: 1.6em;
+    }
+    .cta:hover {
+        background-color: #022d24;
+    }
+}
