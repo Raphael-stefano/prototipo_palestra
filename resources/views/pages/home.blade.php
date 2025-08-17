@@ -23,22 +23,22 @@
             <div class="hero-text hero-mobile">
                 <h1>Desbloqueie Sua Mente para o <strong>Emagrecimento Definitivo</strong></h1>
             </div>
-            <div class="form-box">
+            <div id="form-box" class="form-box">
                 <h3>Garanta Sua Vaga no Webinar Exclusivo</h3>
                 <p>Preencha o formulário abaixo para garantir sua participação.</p>
                 <form class="form" action="{{ route('users.store') }}" method="post">
                     @csrf
                     <input type="text" name="name" placeholder="Seu Nome" required>
                     @error('name')
-                        <div class="error">{{ $message }}</div>
+                        <x-box-alert>{{ $message }}</x-box-alert>
                     @enderror
                     <input type="email" name="email" placeholder="Digite seu melhor e-mail" required>
                     @error('email')
-                        <div class="error">{{ $message }}</div>
+                        <x-box-alert>{{ $message }}</x-box-alert>
                     @enderror
                     <input type="tel" name="telephone" placeholder="(DDD) Whatsapp" required>
                     @error('telephone')
-                        <div class="error">{{ $message }}</div>
+                        <x-box-alert>{{ $message }}</x-box-alert>
                     @enderror
                     <button type="submit">Garantir Minha Vaga Agora</button>
                 </form>
@@ -99,7 +99,7 @@
                     <li>Como reprogramar sua mente para escolhas alimentares conscientes sem sofrimento.</li>
                     <li>O segredo para transformar sua relação com a comida e com seu corpo de forma definitiva.</li>
                 </ul>
-                <a href="#" class="cta">É isso que eu quero! >>></a>
+                <a href="#form-box" class="cta">É isso que eu quero! >>></a>
             </div>
             <p><strong>Esse nao é mais um método de emagrecimento.</strong> É uma abordagem que vai te ensinar a desbloquear o poder da sua mente para conquistar o corpo que voce deseja, sem dietas malucas ou exercícios exaustivos.</p>
         </section>

@@ -16,7 +16,7 @@ use App\Http\Controllers\UserController;
 */
 
 // Grupo de rotas para páginas
-Route::prefix('pages')->name('pages.')->group(function () {
+Route::prefix('')->name('.')->group(function () {
     Route::get('/', function () {
         return view('pages/home');
     })->name('landing-page');

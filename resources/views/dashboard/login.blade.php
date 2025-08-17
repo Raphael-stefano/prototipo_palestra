@@ -4,7 +4,7 @@
 
     <main class="main-content" style="display: flex; justify-content: center; align-items: center;">
         @if (session('error'))
-            <p style="color: red;">{{ session('error') }}</p>
+            <x-box-alert>{{ session('error') }}</x-box-alert>
         @endif
         <div class="form-box">
             <h3>Autentique-se para entrar no dashboard</h3>
@@ -13,11 +13,11 @@
                 @csrf
                 <input type="text" name="username" placeholder="Username" required>
                 @error('username')
-                    <div class="error">{{ $message }}</div>
+                    <x-box-alert>{{ $message }}</x-box-alert>
                 @enderror
                 <input type="password" name="password" placeholder="Senha" required>
                 @error('password')
-                    <div class="error">{{ $message }}</div>
+                    <x-box-alert>{{ $message }}</x-box-alert>
                 @enderror
                 <button type="submit">Acessar o Dashboard</button>
             </form>

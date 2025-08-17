@@ -10,15 +10,15 @@
                 @csrf
                 <input type="text" name="name" placeholder="Nome do usuário" required>
                 @error('name')
-                    <div class="error">{{ $message }}</div>
+                    <x-box-alert>{{ $message }}</x-box-alert>
                 @enderror
                 <input type="email" name="email" placeholder="E-mail do usuário" required>
                 @error('email')
-                    <div class="error">{{ $message }}</div>
+                    <x-box-alert>{{ $message }}</x-box-alert>
                 @enderror
                 <input type="tel" name="telephone" placeholder="Whatsapp do usuário" required>
                 @error('telephone')
-                    <div class="error">{{ $message }}</div>
+                    <x-box-alert>{{ $message }}</x-box-alert>
                 @enderror
                 <button type="submit">Garantir Minha Vaga Agora</button>
             </form>
